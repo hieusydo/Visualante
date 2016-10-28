@@ -1,18 +1,12 @@
 {
-  "name": "Visualante",
-  "version": "1.0.0",
-  "description": "The WebGL Globe is an open platform for geographic data visualization created by the Google Data Arts Team. We encourage you to copy the code, add your own data, and create your own globes.",
-  "main": "app.js",
+  "name": "node-sample",
+  "description": "Our sample Node to Heroku app",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hieusydo/Visualante"
-  },
-  "author": "Hieu Do",
-  "license": "MIT",
-  "dependencies" : {
-    "express"        : "4.14.0"
+  "dependencies": {
+    "ejs": "~1.0.0",
+    "express": "~4.9.8"
   }
 }
