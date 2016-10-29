@@ -12,7 +12,9 @@
   },
   "author": "Hieu Do",
   "license": "MIT",
-  "dependencies" : {
-    "express"        : "4.14.0"
+  "dependencies": {
+    "express": "4.14.0",
+    "jsonfile": "^2.4.0",
+    "request": "^2.76.0"
   }
 }

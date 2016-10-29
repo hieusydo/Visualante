@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>WebGL Globe</title>
+    <title>WebGL Globe - Human Development Data</title>
     <meta charset="utf-8">
     <style type="text/css">
       html {
@@ -106,22 +106,18 @@
   <div id="container"></div>
 
   <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
+    <strong><a href="https://github.com/hieusydo/Visualante">A Simple WebGL Project Made by Hieu Do</a></strong> <span class="bull">&bull;</span> Visualizing Human Development<span class="bull">&bull;</span> Powered by <a href="https://www.chromeexperiments.com/globe">WebGL Globe</a> <span class="bull">&bull;</span> Data from <a href="http://hdr.undp.org/en/data#">United Nations Development Programme</a>
   </div>
 
   <div id="currentInfo">
     <span id="year1990" class="year">1990</span>
-    <span id="year1995" class="year">1995</span>
     <span id="year2000" class="year">2000</span>
+    <span id="year2014" class="year">2014</span>
   </div>
 
   <div id="title">
-    World Population
+    Worldwide Education Index
   </div>
-
-  <a id="ce" href="http://www.chromeexperiments.com/globe">
-    <span>This is a Chrome Experiment</span>
-  </a>
 
   <script type="text/javascript" src="third-party/Detector.js"></script>
   <script type="text/javascript" src="third-party/three.min.js"></script>
@@ -133,7 +129,8 @@
       Detector.addGetWebGLMessage();
     } else {
 
-      var years = ['1990','1995','2000'];
+      var years = ['1990','2000','2014'];
+      // var years = ['2004', '2008','2012'];
       var container = document.getElementById('container');
       var globe = new DAT.Globe(container);
 
@@ -165,8 +162,9 @@
       
       
       xhr = new XMLHttpRequest();
-      xhr.open('GET', 'population909500.json', true);
-      // xhr.open('GET', '/globe/poverty.json', true);
+      // xhr1.open('GET', 'population909500.json', true);      
+      xhr.open('GET', 'dataset/edu_normalized.json', true);
+      // xhr.open('GET', 'poverty.json', true);
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
@@ -185,7 +183,7 @@
           }
         }
       };
-      xhr.send(null);
+      xhr.send(null);    
     }
 
   </script>

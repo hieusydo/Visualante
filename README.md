@@ -1,3 +1,7 @@
 # Visualante 
 
-Visualize stuff~~~
+To do:
+
+- Extract JSON data with specified format 
+- Visualize 
+- Create a live socket 
