@@ -62,11 +62,11 @@ def generate_JSON(years, preprocessed):
   data = []
   for i in xrange(len(years)):
     data.append([years[i], preprocessed[i]])
-  with open('../globe/edu_normalized.json', 'wb') as outfile:
+  with open('../globe/dataset/edu_normalized.json', 'wb') as outfile:
     json.dump(data, outfile)
 
 def main():
-  filename = 'edu_coord.csv'
+  filename = 'hdp_education_coordinates.csv'
   years = ["1990", "2000", "2014"]
   preprocessed = []
   # extracted = process_csv(filename, "2014")
